@@ -1,5 +1,6 @@
 const InternshipApplication = require('../model/InternFullDetails');
 
+
 const submitApplication = async (req, res) => {
     try {
         const {

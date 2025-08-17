@@ -21,5 +21,5 @@ const InternshipApplicationSchema = new mongoose.Schema({
 });
 
 
-const InternDetails = mongoose.models.InternDetails || mongoose.model('InternDetails', InternshipApplicationSchema);
-module.exports = InternDetails;
+const InternshipApplication = mongoose.models.InternshipApplication || mongoose.model('InternDetails', InternshipApplicationSchema);
+module.exports = InternshipApplication;
