@@ -9,6 +9,8 @@ const rateLimit = require("express-rate-limit");
 const helmet = require('helmet');
 require("dotenv").config();
 const adminRoutes = require("./Routes/admin/unverified");
+
+
 const validateRoute = require("./Routes/admin/validation");
 
 
@@ -34,6 +36,7 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+dotenv.config();
 
 // REMOVED: All session and passport middleware
 // app.use(session({ secret: 'your_secret', resave: false, saveUninitialized: true }));
@@ -47,7 +50,7 @@ app.use((req, res, next) => {
 });
 
 // MongoDB Connection
-const MONGODB_URI = 'mongodb://localhost:27017/HackCulprit_website';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
