@@ -1,5 +1,5 @@
 const { Document, Packer, Paragraph, TextRun } = require("docx");
-const InternDetails = require('../model/internFullDetails');
+const InternDetails = require('../model/InternFullDetails');
 const ExcelJS = require('exceljs');
 const adminAuth = require("../middleware/auth");
 
